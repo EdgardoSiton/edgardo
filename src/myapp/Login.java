@@ -115,8 +115,14 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 240, 50));
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel1.setText("New User? Click Here to Register ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 210, -1));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("New User? Click Here to Register. ");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 286, 280, 30));
 
         minimize.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         minimize.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -209,7 +215,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_minimizeMouseClicked
 
     private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
- int a = JOptionPane.showConfirmDialog(null,"Do Your want to Exit");
+ int a = JOptionPane.showConfirmDialog(null,"Confirm Exit?");
       if(a==JOptionPane.YES_OPTION ){
           System.exit(0);
         }  
@@ -273,6 +279,12 @@ public class Login extends javax.swing.JFrame {
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
        password.setEchoChar('*');
     }//GEN-LAST:event_passwordActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+      signupPage dash = new signupPage();
+         dash.setVisible(true);
+         
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments

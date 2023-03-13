@@ -6,6 +6,7 @@
 package userpages;
 import java.io.*;
 import javax.swing.*;
+import myapp.FirstDashboard;
 
 /**
  *
@@ -75,10 +76,14 @@ public class CakeInventory extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jTextField14 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        close = new javax.swing.JLabel();
+        minimize = new javax.swing.JLabel();
+        jButton19 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(910, 511));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
@@ -215,7 +220,7 @@ public class CakeInventory extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 390, 140, 50));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 390, 140, 50));
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 153, 255));
 
@@ -656,10 +661,40 @@ public class CakeInventory extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Add/Delete", jPanel2);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 470, 485));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 15, 470, 490));
+
+        close.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        close.setText("X");
+        close.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeMouseClicked(evt);
+            }
+        });
+        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 0, 30, -1));
+
+        minimize.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        minimize.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        minimize.setText("—");
+        minimize.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                minimizeMouseClicked(evt);
+            }
+        });
+        jPanel1.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 30, -1));
+
+        jButton19.setBackground(new java.awt.Color(255, 102, 102));
+        jButton19.setFont(new java.awt.Font("Bahnschrift", 1, 14)); // NOI18N
+        jButton19.setText("BACK");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 100, 30));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/myapp/c10fb808680f861f4d8402bc76b25c64.png"))); // NOI18N
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 530));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 530));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 910, 530));
 
@@ -1080,6 +1115,25 @@ public class CakeInventory extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void closeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseClicked
+        int a = JOptionPane.showConfirmDialog(null,"Confirm Exit?");
+        if(a==JOptionPane.YES_OPTION ){
+            System.exit(0);
+        }
+
+        //password    password.setEchoChar('*');
+    }//GEN-LAST:event_closeMouseClicked
+
+    private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
+        setState(ICONIFIED);
+    }//GEN-LAST:event_minimizeMouseClicked
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        FirstDashboard db = new FirstDashboard();
+        db.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton19ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1116,6 +1170,7 @@ public class CakeInventory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel close;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1125,6 +1180,7 @@ public class CakeInventory extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1163,5 +1219,6 @@ public class CakeInventory extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel minimize;
     // End of variables declaration//GEN-END:variables
 }

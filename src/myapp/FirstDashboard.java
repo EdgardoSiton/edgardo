@@ -254,7 +254,7 @@ public class FirstDashboard extends javax.swing.JFrame {
     private void accountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountMouseClicked
         CakeInventory a= new CakeInventory ();
         a.setVisible(true);
-        a.setDefaultCloseOperation(CakeInventory .DISPOSE_ON_CLOSE); 
+        this.dispose();
 
     }//GEN-LAST:event_accountMouseClicked
 

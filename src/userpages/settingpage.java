@@ -206,6 +206,7 @@ public class settingpage extends javax.swing.JInternalFrame {
         mainFrame.dispose();
         Login up = new Login();
         up.setVisible(true);
+        dispose();
     }//GEN-LAST:event_logoutMouseClicked
 
 

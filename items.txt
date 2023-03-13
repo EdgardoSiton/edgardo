@@ -1,4 +1,1 @@
-chiffon	10	250.0
-Brownies	3	20.0
-brownies	10	50.0
-chiffoons	10	100.0
+Cookies	15	10.0

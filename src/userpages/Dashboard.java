@@ -239,6 +239,7 @@ public class Dashboard extends javax.swing.JInternalFrame {
         });
         JPanel2.add(contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 340, 150, 20));
 
+        jTable1.setAutoCreateRowSorter(true);
         jTable1.setBackground(new java.awt.Color(255, 204, 255));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
